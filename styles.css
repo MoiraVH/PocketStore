@@ -1,0 +1,92 @@
+:root {
+  --color-primario: #7a1f3d;
+  --color-primario-oscuro: #57152d;
+  --color-fondo: #f7f2f4;
+  --color-texto: #30252a;
+  --color-tarjeta: #ffffff;
+  --color-borde: #eadde2;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Barra superior ---- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background: var(--color-primario);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(87, 21, 45, 0.25);
+}
+.app-header h1 {
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.badge-online  { background: #3f8f5b; color: #fff; }
+.badge-offline { background: #e0a23b; color: #30252a; }
+
+/* ---- Contenedor principal ---- */
+.contenedor {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1.2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+.mensaje { grid-column: 1 / -1; text-align: center; padding: 2rem; }
+.mensaje.error { color: #b91c1c; }
+
+/* ---- Tarjetas ---- */
+.tarjeta {
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(87, 21, 45, 0.08);
+}
+.tarjeta h2 { font-size: 1.05rem; color: var(--color-primario); margin-bottom: 0.3rem; }
+.tarjeta p  { font-size: 0.9rem; margin: 0.15rem 0; }
+.tarjeta .empresa {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #765d67;
+}
+
+.tarjeta .icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.35rem;
+  vertical-align: -0.2em;
+}
+
+/* ---- Pie de página ---- */
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background: #eee3e7;
+  color: #765d67;
+}

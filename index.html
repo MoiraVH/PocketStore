@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="PocketStore: catálogo offline con Vanilla JS">
+  <title>PocketStore</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Shell: barra superior -->
+  <header class="app-header">
+    <h1> PocketStore</h1>
+    <span id="estado-conexion" class="badge badge-online">En línea</span>
+  </header>
+
+  <!-- App Shell: contenedor principal -->
+  <main id="contenedor" class="contenedor">
+    <p class="mensaje">Cargando catálogo…</p>
+  </main>
+
+  <!-- App Shell: pie de página -->
+  <footer class="app-footer">
+    <p>PocketStore © 2026 · Moira Villalobos · IDGS102N</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
